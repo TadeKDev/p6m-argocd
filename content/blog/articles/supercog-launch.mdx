@@ -1,0 +1,64 @@
+---
+title: "A super beta launch"
+description: "We are launching Supercog in public beta and we're excited to see what people build with it."
+categorySlugs: ["news"]
+authorSlug: "scott"
+publishedAt: "2024-09-19"
+imagePath: "/blog/articles/supercog-launch/launch-image.png"
+imageAlt: "Supercog Launch"
+---
+
+After a summer heads down, building, we are ready to take the wrapping off of Supercog AI, 
+our new AI agent platform. While still rough around the edges, you can already do remarkable
+things with the Supercog platform.
+
+## A connected AI assistant
+Rather than just acting as a design co-pilot, consulting on your problem, Supercog works by
+getting connected **live** to all the systems in your company. Giving Supecog access
+to those systems means that it can start to solve problems specific to your company, and do
+so in a more much autonomous way than something like ChatGPT.
+
+We like to think of Supercog as your **AI digital assistant** helping you out at work.
+I liken Supercog to how **R2D2** works in Star Wars. He communicates fine with the humans,
+but when they get into the Death Star R2 goes and plugs into the "computer port" and starts
+communicating with the master commputer.
+
+Beyond those system connections, we have given Supercog just a ton of raw capabilities:
+
+- Image recognition
+- Image generation
+- Text to speech
+- Ability to search the web, browse the web, take web screenshots
+- Understands docs in any format
+- Connectors not just to apps, but databases and data warehouses
+- A suite of developer tools like the REST API tool, DuckDB tool, and Code Interpreter
+- GenAI tools like Retrieval Augmented Generation
+
+It's possibly **too much** power, honestly! But the truth is that now we are deep
+in process of showing people how they can use Supercog at work, with lots and lots of
+examples. 
+
+## What can I do with this thing?
+Here are just some of the ways people can use Supercog today:
+
+- Copy a set of issues from JIRA into Saleforce, transforming them into the structure of the Salesforce _Case_ object, with this prompt:
+
+  ```
+  If you are asked to copy data from JIRA to Salesforce then do this:
+  1. Retrieve the record schemas from JIRA and Salesforce and compare them
+  2. Download all the records from JIRA into duckdb
+  3. Transform the records into Salesforce schema
+  4. Upsert all records into Salesforce
+  ```
+
+- Create a morning news [audio stream](https://drive.google.com/file/d/1YyRpqdpnWZLpeqI62mEi9yPyPJiq5qTF/view?usp=sharing) taken from the day's top headlines
+- Have Supercog do extensive web research when you are meeting with someone new and send you a "meeting prep" report.
+- Build a RAG chatbot from a set of web pages with just a simple set of English instructions.
+- Prepare a deep research [report](https://drive.google.com/file/d/18ZUf7Krt2l-zmL3yDKvKb-cqBqMm3jF_/view?usp=sharing) on any topic.
+- Export data from any system in CSV with a couple simple commands
+- Apply image recoginition to a complex PDF form to extract useable data into a spreadsheet
+
+## Just getting started
+The platform is still in such an early state, but we can already see a world where
+Supercog can connect to _any system_, understand any file or image, and help with
+a myriad of "glue" tasks at work.

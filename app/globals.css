@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600&display=swap');
+
+html,
+body {
+  scroll-behavior: smooth !important;
+}
+
+/* It makes the HTML progress bar filling smooth when value change. */
+progress::-webkit-progress-value {
+  transition: 0.6s width ease-out;
+}
+
+@layer base {
+  .btn-gradient {
+    @apply animate-shimmer !border-0 !border-transparent !bg-transparent !bg-gradient !bg-[length:300%_300%] !text-white shadow duration-100 hover:saturate-[1.2] disabled:!bg-gray-500/30 disabled:!bg-none;
+  }
+  .rounded-md {
+    border-radius: 4px !important;
+  }
+  .btn {
+    @apply !capitalize;
+    font-weight: 500 !important;
+    border-radius: 4px !important;
+  }
+  .link {
+    font-weight: 500 !important;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-semibold;
+  }
+}

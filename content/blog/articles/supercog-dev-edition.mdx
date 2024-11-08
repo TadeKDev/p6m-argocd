@@ -1,0 +1,59 @@
+---
+title: "Launching our Developer Edition"
+description: "Run the Supercog platform in your environment"
+categorySlugs: ["news"]
+authorSlug: "alex"
+publishedAt: "2024-10-10"
+imagePath: "/blog/articles/supercog-dev.png"
+imageAlt: "Supercog Dev Edition"
+---
+
+Today we are launching a local-installable [Developer Edition](https://github.com/supercog-ai/supercog-dev) 
+of Supercog, available to anyone on GitHub.
+
+This is a very cool package that gets you running with the whole platform, locally, in about
+10 minutes. Everything runs in Docker on your machine. 
+Hat tip to Declan Brady who did most of the heavy lifting.
+
+The prerequisites are minimal:
+
+- Docker desktop
+- Your an OpenAI API key
+
+That's it! We even run a local _MinIO_ server to handle file storage for you (you
+can use your own S3 bucket if you prefer).
+
+## Local advantages
+
+Running agents locally on your machine offers some interesting benefits:
+
+- We enable some tools like our _Native Code Interpreter_ which we can't run safely
+yet in our cloud version. You should try out the native interpreter - let the LLM
+run code locally on your machine, including installing new packages! 
+
+- Some tools like the _Playright_ tool basically only operate on localhost.
+
+- All your data stays local. We don't see any of it. If you run a local LLM via
+[Ollama](https://ollama.com/) then your agent never even interacts with a cloud
+LLM like GPT or Claude.
+
+## Build your own tools
+
+One of the big selling points for Supercog is **extensibility**. Adding your 
+own custom tools suddenly gives your Agents new powers. You can connect your
+agent to your custom app API, or give it access to some proprietary data source
+that you use at work. We think there's a great model where developers at your
+company write some custom tools which are then "AI enabled" for everyone else
+in the company. 
+
+Writing new tools is really, really easy. If you have any questions about how
+to do it please [reach out](https://github.com/supercog-ai/community/discussions) and
+ask.
+
+## From dev to production
+
+This package isn't really _production ready_, but it will be very close to
+what a full production setup will look like (assuming you don't want to use
+our cloud version). The main work is to decompose the docker-compose so 
+that you run your own Postgres and Redis servers, and you configure the
+platform with proper production S3 buckets.
